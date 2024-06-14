@@ -1,10 +1,10 @@
 import styles from "./App.module.css";
-import Business from "../Business/Business";
+import BusinessList from "../BusinessList/BusinessList";
 
 function App() {
   return (
     <div className={styles.App}>
-      <Business />
+      <BusinessList />
     </div>
   );
 }

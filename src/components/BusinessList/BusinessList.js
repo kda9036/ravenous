@@ -1,13 +1,11 @@
 import Business from "../Business/Business";
 import styles from "./BusinessList.module.css";
 
-const businessList = [1, 2, 3];
-
-export default function BusinessList() {
+export default function BusinessList({ businesses }) {
   return (
     <div className={styles.BusinessList}>
-      {businessList.map(() => (
-        <Business />
+      {businesses.map((business) => (
+        <Business business={business} key={business.name} />
       ))}
     </div>
   );

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./SearchBar.module.css";
 
 const sortByOptions = {
@@ -7,10 +8,35 @@ const sortByOptions = {
 };
 
 export default function SearchBar() {
+  const [term, setTerm] = useState("");
+  const [location, setLocation] = useState("");
+  const [sortBy, setSortBy] = useState("best_match");
+
+  const getSortByClass = (sortByOption) => {
+    if (sortBy === sortByOption) {
+      return styles.active;
+    }
+    return "";
+  };
+
+  const handleSortByChange = (sortByOption) => {
+    setSortBy(sortByOption);
+  };
+
   const renderSortByOption = () => {
     return Object.keys(sortByOptions).map((sortByOption) => {
       let sortByOptionValue = sortByOptions[sortByOption];
-      return <li key={sortByOptionValue}>{sortByOption}</li>;
+      return (
+        <li
+          className={getSortByClass(sortByOptionValue)}
+          key={sortByOptionValue}
+          onClick={() => {
+            handleSortByChange(sortByOptionValue);
+          }}
+        >
+          {sortByOption}
+        </li>
+      );
     });
   };
 

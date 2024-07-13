@@ -31,6 +31,11 @@ export default function SearchBar() {
     setLocation(event.target.value);
   };
 
+  const handleSearch = (event) => {
+    event.preventDefault();
+    console.log(`Searching Yelp with ${term}, ${location}, ${sortBy}`);
+  };
+
   const renderSortByOption = () => {
     return Object.keys(sortByOptions).map((sortByOption) => {
       let sortByOptionValue = sortByOptions[sortByOption];
@@ -53,23 +58,25 @@ export default function SearchBar() {
       <div className={styles.SearchBarSortOptions}>
         <ul>{renderSortByOption()}</ul>
       </div>
-      <div className={styles.SearchBarFields}>
-        <input
-          type="text"
-          name="businesses"
-          placeholder="Search Businesses"
-          onChange={handleTermChange}
-        />
-        <input
-          type="text"
-          name="location"
-          placeholder="Where?"
-          onChange={handleLocationChange}
-        />
-      </div>
-      <div className={styles.SearchBarSubmit}>
-        <a>Let's Go</a>
-      </div>
+      <form onSubmit={handleSearch}>
+        <div className={styles.SearchBarFields}>
+          <input
+            type="text"
+            name="businesses"
+            placeholder="Search Businesses"
+            onChange={handleTermChange}
+          />
+          <input
+            type="text"
+            name="location"
+            placeholder="Where?"
+            onChange={handleLocationChange}
+          />
+        </div>
+        <div className={styles.SearchBarSubmit}>
+          <button type="submit">Let's Go</button>
+        </div>
+      </form>
     </div>
   );
 }

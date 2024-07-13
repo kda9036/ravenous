@@ -27,6 +27,10 @@ export default function SearchBar() {
     setTerm(event.target.value);
   };
 
+  const handleLocationChange = (event) => {
+    setLocation(event.target.value);
+  };
+
   const renderSortByOption = () => {
     return Object.keys(sortByOptions).map((sortByOption) => {
       let sortByOptionValue = sortByOptions[sortByOption];
@@ -56,7 +60,12 @@ export default function SearchBar() {
           placeholder="Search Businesses"
           onChange={handleTermChange}
         />
-        <input type="text" name="location" placeholder="Where?" />
+        <input
+          type="text"
+          name="location"
+          placeholder="Where?"
+          onChange={handleLocationChange}
+        />
       </div>
       <div className={styles.SearchBarSubmit}>
         <a>Let's Go</a>

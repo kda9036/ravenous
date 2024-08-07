@@ -1,5 +1,5 @@
-const apiKey =
-  "Yqcru0tlMJtoTM4iKal9KNR_Kjs_JaIqwSIkIL03mD6YCZ6VxtvzFt0h3HD1BakgnNsNzhHxiKKn9YhjQ_vT3A6co4135O_gi9_4Lu-yj9UN6cl0DD5S6w2IlN-zZnYx";
+// add API key from Yelp app credentials
+const apiKey = "";
 
 const Yelp = {
   async search(term, location, sortBy) {

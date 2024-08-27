@@ -29,7 +29,7 @@ Homepage
 Mock Search
 ![alt text](image-4.png)
 
-Mock Search - Sorted by Higheset Rated
+Mock Search - Sorted by Highest Rated
 ![alt text](image-5.png)
 
 # CORS issue resolved via Codecademy instructions

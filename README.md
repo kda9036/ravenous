@@ -1,3 +1,49 @@
+# Ravenous - About
+
+A restaurant recommendation website that allows users to seach for businesses based on location and keywords. Replicates the core functionality of Yelp using the Yelp API. (Front-end app with React project via Codecademy.)
+
+# Tech Stack
+
+HTML, CSS, JavaScript, React, Yelp API
+
+# Features
+
+- Users can query for a restaurant based on a keyword and location, and sort it by best match, highest rated, and most reviewed.
+- Users can view a list of businesses that match their query, sorted by best match, highest rated, or most reviews. The list is scrollable.
+- Users can repeatedly make multiple queries for a restaurant recommendation.
+
+# Future Work
+
+- Improve styling, which was borrowed from a Codecademy solution to save time and focus on the functionality of the app and React
+- Write test cases and perform additional testing of the site to check for bugs
+- Add features such as loading animations and additional restaurant information (link to restaurant, etc.)
+- Explore methods to hide API key
+
+# Screenshots
+
+This app was created with trial access to the Yelp API (https://docs.developer.yelp.com/docs/fusion-intro). To use the app, a new API key would need to be obtained and added to the Yelp.js file. Screenshots of the functioning app during the trial period are as follows:
+
+Homepage
+![alt text](image.png)
+
+Mock Search
+![alt text](image-4.png)
+
+Mock Search - Sorted by Higheset Rated
+![alt text](image-5.png)
+
+# CORS issue resolved via Codecademy instructions
+
+If your fetch() method works as intended, you can skip this step. If you are seeing errors with your fetch() method, it may not be working properly due to CORS restrictions.
+
+You can bypass this restriction with an API called CORS Anywhere. CORS Anywhere will take requests sent to its API endpoint, make them for the requesting app with the proper CORS permissions, and then return the response back to the requesting app.
+
+In your own browser, visit https://cors-anywhere.herokuapp.com/corsdemo and click “Request temporary access to the demo server”
+
+Back in your code, prepend the URL path you passed to the first argument in fetch() with the following:
+
+https://cors-anywhere.herokuapp.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
